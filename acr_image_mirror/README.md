@@ -191,6 +191,20 @@ runs/default/
 后续可使用 `source_to_acr` 映射生成一份独立的 ACR 项目配置，或从 ACR 拉取后
 添加官方兼容引用；本工具没有修改原始 `projects`。
 
+## 镜像大小统计
+
+统计已归档镜像的压缩大小（完全离线读取已有 manifest 日志，不下载镜像）：
+
+```bash
+python3 /data/cybergym-e2e/acr_image_mirror/image_sizes.py
+```
+
+结果保存在 `runs/default/size_stats/`：`summary.json` 为汇总，`images.csv` 为按大小排序的
+逐镜像明细，`report.md` 为可阅读报告。分别计算逐镜像相加和所有 layer/config/manifest
+按 digest 去重的数据量。原始 manifest 字节按 ACR digest 校验；若日志缺失则报错，
+不会将缺失镜像按零计入。可用 `--run-dir` 指定其他归档目录。
+该结果不代表解压后的本地磁盘占用，也不包含 ACR 仓库额外开销或清单外其他内容。
+
 ## 验证
 
 ```bash

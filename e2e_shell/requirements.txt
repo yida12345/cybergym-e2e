@@ -1,0 +1,22 @@
+# CyberGym-E2E 外壳独立依赖（安装到 e2e_shell/.venv，不触碰 arvo 环境）
+#
+# 安装：
+#   python3 -m venv /data/cybergym-e2e/e2e_shell/.venv
+#   /data/cybergym-e2e/e2e_shell/.venv/bin/pip install -r requirements.txt
+#
+# 本会话写入时无外网访问，以下版本为当前可用下限；安装时可按平台
+# 解析到具体版本并冻结（pip freeze > requirements.lock.txt）。
+
+# capture 代理（proxy_retry.py）运行依赖：FastAPI + uvicorn + httpx
+fastapi>=0.110
+uvicorn>=0.29
+httpx>=0.27
+
+# Hugging Face 官方数据集下载（DOWNLOAD_AND_RUN.md 第 1-2 节）
+huggingface_hub>=0.24
+
+# TOML 写入（容器内配置脱敏的完整兼容路径；外壳核心用 stdlib tomllib + 窄域实现）
+tomli-w>=1.0
+
+# 开发验收测试（pytest 可直接运行 unittest 套件）
+pytest>=8.0

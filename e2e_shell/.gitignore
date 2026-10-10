@@ -1,0 +1,29 @@
+# 本地环境与凭据
+.venv/
+.env
+*.key
+*.pem
+credentials*
+secrets*
+
+# 缓存与临时状态
+__pycache__/
+*.pyc
+.pytest_cache/
+.cache/
+*.tmp
+*.lock.tmp
+
+# 本地运行状态（数据在 ../output，不在代码目录）
+state/
+runs/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+
+# 工具与下载
+node_modules/
+tools/
+
+# OS
+.DS_Store

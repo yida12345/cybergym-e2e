@@ -1,0 +1,18 @@
+{
+  "worker_exception_marks_finished_but_keeps_task_running": {
+    "worker_state": "finished",
+    "task_state": "running",
+    "attempt_state": "running"
+  },
+  "finalizer_error_does_not_fail_finalization": {
+    "returned_normally": true,
+    "finalizer": {
+      "error": "finalizer exit=7"
+    }
+  },
+  "npm_prefix_install_layout": {
+    "returncode": 0,
+    "actual_local_install_dir_exists": true,
+    "installer_expected_lib_dir_exists": false
+  }
+}

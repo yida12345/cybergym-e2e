@@ -1,0 +1,53 @@
+{
+  "interrupted_repeat_counted_done": {
+    "done": 1,
+    "pending": 1
+  },
+  "generation_reuses_old_directory_and_receipt": {
+    "same_output_dir": true,
+    "first_generation": 1,
+    "second_generation": 2,
+    "old_receipt_accepted": true,
+    "receipt_matches_current_attempt": false
+  },
+  "failed_receipt_recovered_as_success": {
+    "result": "failed",
+    "queue_outcome": "success"
+  },
+  "actual_capture_launch_name_ignored": {
+    "existing_captures": 1,
+    "scanned_launches": 0,
+    "aggregated_captures": 0
+  },
+  "online_has_metadata_only_and_does_not_update_frozen_result": {
+    "published_record_keys": [
+      "attempt_id",
+      "checks",
+      "provisional",
+      "result",
+      "signature"
+    ],
+    "sharegpt_exists": false,
+    "updates_reported": 1,
+    "successful_after_failure_update": 1,
+    "failed_after_failure_update": 0
+  },
+  "changed_validation_budget_scripts_and_capture_accepted_on_resume": true,
+  "real_capture_body_json_effort_unrecognized": {
+    "checked_requests": 1,
+    "model": "glm53",
+    "effort_fields": [],
+    "supported": false
+  },
+  "runtime_generated_manifest_verification": "KeyError: 'version'",
+  "silent_cc_ignores_timeout_and_stop": {
+    "requested_timeout_seconds": 0.05,
+    "elapsed_seconds": 0.61,
+    "stop_reason": null
+  },
+  "exited_cc_stream_not_fully_drained": {
+    "available_lines": 3,
+    "saved_lines": 1
+  },
+  "wrong_digest_limits_and_mount_accepted": true
+}
